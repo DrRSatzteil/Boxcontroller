@@ -9,7 +9,7 @@ CRITICAL_VOLTAGE = 3.4 # Volts
 
 class Power(Thread):
     
-    def __init__(self, callback, debug=False):
+    def __init__(self, callback):
         Thread.__init__(self, daemon=True)
         self.shutdown = Event()
         self.channelAVoltage = None
@@ -17,7 +17,6 @@ class Power(Thread):
         self.runningOnBackup = False
         self.criticalVoltage = False
         self.callback = callback
-        self.debug = debug
 
     def run(self):
         while True:

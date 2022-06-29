@@ -138,7 +138,7 @@ class Box():
         self.buttonManager = ButtonManager(self)
 
     def __setupPowerControl(self):
-        self.power = Power(self, True)
+        self.power = Power(self)
     
     def __setupShutdownManager(self):
         self.shutdownManager = ShutdownController()
