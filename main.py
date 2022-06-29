@@ -32,10 +32,6 @@ class Box():
         self.programmingModeThread = None
         self.programmingModeCancelEvent = Event()
         self.programmingUid = None
-        self.prevButtonThread = None
-        self.prevButtonCancelEvent = Event()
-        self.nextButtonThread = None
-        self.nextButtonCancelEvent = Event()
         self.__setupLed()
         self.__setupButtons()
         self.__setupPlayer()
